@@ -1,3 +1,4 @@
+// import 用來引入其他模組（檔案、函式、變數、元件
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
