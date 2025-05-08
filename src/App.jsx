@@ -16,7 +16,8 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>本網站使用Vite + React開發</h1>
+      {/* <h1>本網站使用Vite + React開發</h1> */}
+      <h1>5B1G0006 王芷涵</h1>
       <h2>我的第一個元件：Slider</h2>
       
       <div>
