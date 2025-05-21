@@ -5,6 +5,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import MySlider from "./component/MySlider";
 import MyPanel from "./component/MyPanel";
+import MyCalculator from "./component/MyCalculator";
 
 function App() {
   const [count, setCount] = useState(0)
@@ -30,9 +31,11 @@ function App() {
       </div>
 
       <br/>
-      
+
       <h2>第二個元件：RGB色彩面板</h2>
       <MyPanel />
+      <h2>計算機</h2>
+      <MyCalculator />
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
