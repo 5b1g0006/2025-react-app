@@ -1,13 +1,6 @@
 import { useState } from "react";
 import "./MySlider.css";
 
-
-// function MySlider() {
-//   const [value, setValue] = useState(128);
-//   const handleChange = (e) => {
-//     setValue(e.target.value);
-//   };
-
 function MySlider({ value, onChange }) {
   // 如果有 value 和 onChange，則為受控元件，否則為自管狀態
   const [internalValue, setInternalValue] = useState(128);

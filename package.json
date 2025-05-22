@@ -3,7 +3,6 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-
   "homepage": "https://5b1g0006.github.io/2025-react-app/",
   "scripts": {
     "dev": "vite",

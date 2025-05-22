@@ -2,7 +2,7 @@
 function MyErrorMessage({ error }) {
   if (!error) return null; // 無錯誤時不顯示
   return (
-    <div style={{ color: "#c00", marginTop: 8, minHeight: 24, textAlign: "center" }}>
+    <div className="my-calculator-error">
       {error}
     </div>
   );
