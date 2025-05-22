@@ -1,0 +1,50 @@
+(同學給的)
+
+1. Node安裝
+到node.js官網下載，依照安裝指示完成安裝。(非必要不需特定勾選什麼)
+
+2. 確認安裝
+開啟「命令提示字元」
+輸入指令: node -v 和 npm -v 檢查是否安裝成功，如果出現版本號碼代表成功。
+
+3. 架設環境(vscode)
+打開vscode的「命令提示字元」或「powershell」。
+建立專案: npm create vite@latest 專案名稱
+
+按下Enter後，會出現一排網頁架構名稱，用鍵盤上下鍵選擇「React」。
+按Enter後，會出現一排程式語言，選擇「javascript」，按Enter。
+
+4. 專案設定
+系統會自動幫你建立專案，建立好後，輸入 npm install，會出現一個node_modules資料夾，裡面裝javascript的函式庫。
+
+5. 執行
+打開「NPM指令碼」點擊「dev」旁邊的三角形。
+或是在vscode的「命令提示字元」或「powershell」，輸入 npm run dev，按Enter。
+
+之後會在vscode的「命令提示字元」或「powershell」出現網址，按著ctrl點選後就是網頁。
+要結束執行輸入q按Enter，其他指令可輸入h按Enter查看。
+
+
+
+**如果dev無法執行**
+
+情況1: node.js版本太舊
+
+node.js版本至少要在16v以上才能支援現在的vite。
+去node官網下載最新版本安裝後，在專案中再次執行npm install指令，之後在執行dev。
+
+情況2: powershell限制npm指令
+
+解法1(改變系統規則): 
+
+1. 以「系統管理員身分」開啟 powershell，執行 Get-ExecutionPolicy 指令，查看目前的執行規則；如果顯示 Restricted 或 RemoteSigned，就可能會禁止 npm 的執行。
+2. 執行 Set-ExecutionPolicy RemoteSigned 指令，讓 powershell 允許執行，看到確認訊息輸入y按Enter。
+3. 回到專案再次執行dev。
+
+解法2(指改變指定視窗的系統規則):
+
+執行 powershell -ExecutionPolicy Bypass 指令，然後再執行dev。
+
+解法3(使用「命令提示字元」):
+
+不用powershell，改成用「命令提示字元」執行dev。
