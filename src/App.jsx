@@ -6,6 +6,7 @@ import './App.css'
 import MySlider from "./component/rgb-panel/MySlider";
 import MyPanel from "./component/rgb-panel/MyPanel";
 import MyCalculator from "./component/calculator/MyCalculator";
+import TicTacToe from "./component/tic-tac-toe/TicTacToe";
 
 function App() {
   const [count, setCount] = useState(0)
@@ -36,6 +37,9 @@ function App() {
       <MyPanel />
       <h2>計算機</h2>
       <MyCalculator />
+      <h2>第四個元件:井字遊戲</h2>
+      <TicTacToe />
+      
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
