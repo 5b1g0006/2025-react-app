@@ -16,6 +16,13 @@
     border-radius: 0%;
 }
 
+/* 
+ .square.highlight {
+    background-color: gold;         /贏家的格子用金色 /
+    color: red;                     /贏家符號用紅色/ 
+}  */
+
+
 .board-row::after {
     clear: both;
     content: '';

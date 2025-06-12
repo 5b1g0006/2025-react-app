@@ -41,9 +41,12 @@ function Board({xIsNext, squares, onPlay}) {
 
   // 判斷贏家
   const winner = calculateWinner(squares);
+  const isDraw = !winner && squares.every((square) => square !== null);
   let status;
   if (winner) {
     status = "贏家 " + winner;
+  } else if (isDraw) {
+    status = "平手！";
   } else {
     status = "下一個玩家: " + (xIsNext ? "X" : "O");
   }
