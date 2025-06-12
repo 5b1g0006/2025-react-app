@@ -17,6 +17,7 @@ function Board({xIsNext, squares, onPlay}) {
     onPlay(nextSquares);
   };
 
+  // 判斷是否達成直線
   function calculateWinner(squares) {
     const lines = [
       [0, 1, 2],
@@ -34,10 +35,11 @@ function Board({xIsNext, squares, onPlay}) {
       if (squares[a] &&squares[a] === squares[b] &&squares[a] === squares[c]) {
         return squares[a];
       }
-      return null;
     }
+    return null;
   }
 
+  // 判斷贏家
   const winner = calculateWinner(squares);
   let status;
   if (winner) {
