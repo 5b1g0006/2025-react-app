@@ -1,6 +1,5 @@
 import Board from "./Board";
 import { useState } from "react";
-import "./tictactoe.css";
 
 function TicTacToe() {
     const [history, setHistory] = useState([Array(9).fill(null)]);
@@ -19,36 +18,29 @@ function TicTacToe() {
     const moves = history.map((squares, move) => {
       let description;
       if (move > 0) {
-        description = `Go to move #${move}`;
+        description = "回到第 " + move + " 步";
       } else {
-        description = "Go to game start";
+        description = "遊戲開始";
       }
       return (
-        <>
-          <li key={move}>
-            <button onClick={() => jumpTo(move)}>{description}</button>
-          </li>
-        </>
+        
+        <li key={move}>
+          <button onClick={() => jumpTo(move)}>{description}</button>
+        </li>
+        
       );
     });
   
     return (
-      <>
-        <h2>Tic Tac Toe</h2>
-        <div className="game">
-          <div className="game-board">
-            <Board
-              xIsNext={xIsNext}
-              squares={currentSquares}
-              onPlay={handlePlay}
-            />
-          </div>
-          <div className="game-info">
-            <h4>遊戲歷程</h4>
-            <ol>{moves}</ol>
-          </div>
+      <div className="game">
+        <div className="game-board">
+          <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
         </div>
-      </>
+        <div className="game-info">
+          <h4>遊戲歷程</h4>
+          <ol>{moves}</ol>
+        </div>
+      </div>
     );
   }
   
